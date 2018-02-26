@@ -13,11 +13,12 @@ TICK bao gồm 4 thành phần: Telegraf, InfluxDB, Chronograf, Kapacitor. Chứ
 
 ### 2.1 Thêm TICK Stack Repository
 - Tạo file influxdata.repo
-    sudo vi /etc/yum.repos.d/influxdata.repo
+           sudo vi /etc/yum.repos.d/influxdata.repo
 - Thêm nội dung vào file:
-    [influxdb]
-    name = InfluxData Repository - RHEL $releasever
-    baseurl = https://repos.influxdata.com/rhel/$releasever/$basearch/stable
-    enabled = 1
-    gpgcheck = 1
-    gpgkey = https://repos.influxdata.com/influxdb.key
+
+           [influxdb]
+           name = InfluxData Repository - RHEL $releasever
+           baseurl = https://repos.influxdata.com/rhel/$releasever/$basearch/stable
+           enabled = 1
+           gpgcheck = 1
+           gpgkey = https://repos.influxdata.com/influxdb.key
