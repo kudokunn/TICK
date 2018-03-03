@@ -23,9 +23,10 @@ TICK bao gồm 4 thành phần: Telegraf, InfluxDB, Chronograf, Kapacitor. Chứ
            gpgkey = https://repos.influxdata.com/influxdb.key
 ### 2.2 Cài đặt InfluxDB
 - Thực hiện các câu lệnh để cài đặt influxdb:
-sudo yum install influxdb
-sudo systemctl start influxdb
-sudo systemctl enable influxdb
+
+           sudo yum install influxdb
+           sudo systemctl start influxdb
+           sudo systemctl enable influxdb
  
 ### 2.3 Cài đặt và cấu hình Telegraf
 - Cài đăt: sudo yum install telegraf
@@ -70,4 +71,42 @@ sudo systemctl enable influxdb
            
            sudo firewall-cmd --zone=public --permanent --add-port=8888/tcp
            sudo firewall-cmd --reload
+           
+### 2.6 Cài đặt Grafana
+-Thêm repo: vi /etc/yum.repos.d/grafana.repo
+
+                      name=grafana
+                      baseurl=https://packagecloud.io/grafana/stable/el/6/$basearch
+                      repo_gpgcheck=1
+                      enabled=1
+                      gpgcheck=1
+                      gpgkey=https://packagecloud.io/gpg.key https://grafanarel.s3.amazonaws.com/RPM-GPG-KEY-grafana
+                      sslverify=1
+                      sslcacert=/etc/pki/tls/certs/ca-bundle.crt
+ -  Cài đặt: 
+ 
+           sudo yum install grafana
+           systemctl daemon-reload
+           systemctl start grafana-server
+           systemctl status grafana-server
+- Mở port trên firewall
+
+           firewall-cmd --permanent --zone=public --add-port=3000/tcp
+           firewall-cmd --reload
+
+          
+## 3. Cấu hình: Có thể sử dụng Chronograf hoặc Grafana để hiển thị dữ liệu
+### Với Chronograf: Truy cập địa chỉ: localhost:8888
+- Giao diện trạng thái ban đầu: Hình 1
+- Danh sách các host được liệt kê tự động trong influxdb và monitor sẵn một số thành phần HÌnh 2,3
+- Phần data explorer: Cho phép xem dữ liệu trong influxdb hình 4
+- Phần dashboard hình 5
+- Tạo cảnh báo trong phần Alert hình 6
+- Quản lý Influxdb tại Influxdb Admin
+- Thêm source của influxdd từ các host khác 
+### Với Grafana: Truy cập địa chỉ: localhost:3000
+
+
+
+
            
