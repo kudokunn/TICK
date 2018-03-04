@@ -1,0 +1,11 @@
+- name: Add repository mariadb
+  template:
+   src: grafana.repo.j2
+   dest: /etc/yum.repos.d/grafana.repo.j2
+
+- name: install grafana
+  yum:
+   name: grafana
+   state: latest
+   state: started
+   enabled: yes
