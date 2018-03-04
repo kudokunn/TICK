@@ -97,20 +97,36 @@ TICK bao gồm 4 thành phần: Telegraf, InfluxDB, Chronograf, Kapacitor. Chứ
           
 ## 3. Cấu hình: Có thể sử dụng Chronograf hoặc Grafana để hiển thị dữ liệu
 ### Với Chronograf: Truy cập địa chỉ: localhost:8888
-- Giao diện trạng thái ban đầu: Hình 1
-- Danh sách các host được liệt kê tự động trong influxdb và monitor sẵn một số thành phần HÌnh 2,3
-- Phần data explorer: Cho phép xem dữ liệu trong influxdb hình 4
-- Phần dashboard hình 5
-- Tạo cảnh báo trong phần Alert hình 6
+- Giao diện trạng thái ban đầu:
+![](image/1.PNG)
+- Danh sách các host được liệt kê tự động trong influxdb và monitor sẵn một số thành phần
+![](image/2.PNG)
+![](image/3.PNG)
+- Phần data explorer: Cho phép xem dữ liệu trong influxdb
+![](image/4.PNG)
+- Phần dashboard
+![](image/5.PNG)
+- Tạo cảnh báo trong phần Alert
+![](image/6.PNG)
 - Quản lý Influxdb tại Influxdb Admin
-- Thêm source của influxdd từ các host khác 
+![](image/7.PNG)
+- Thêm source của influxdd từ các host khác
+![](image/8.PNG)
 ### Với Grafana: Truy cập địa chỉ: localhost:3000
-- Giao diện login: nhập admin/admin Hình 1,1
-- Thêm database: hình 1.2 ,1.3, 1.4
-- Thêm dashboard: hình 1.5
-Chọn graph -> Panel title -> Edit và lựa chọn các tham số để monitor. Ví dụ ở đây lựa chọn monior CPU hỉnh 1.6
-- Tạo alert: hình 1.7
-- Tạo Channel Alert: Ban đầu cần tạo một BotAPI và ChatID. Ở đây BotAPI: 485183556:AAED64Qp5qx9bYrF9gHQCgIMMHI94yZ6mpc và ChatID: @monitor_stick hinh 1.8 
+- Giao diện login: nhập admin/admin
+![](image/1.1.PNG)
+- Thêm database:
+![](image/1.2.PNG)
+![](image/1.3.PNG)
+![](image/1.4.PNG)
+- Thêm dashboard:
+![](image/1.5.PNG)
+Chọn graph -> Panel title -> Edit và lựa chọn các tham số để monitor. Ví dụ ở đây lựa chọn monior CPU
+![](image/1.6.PNG)
+- Tạo alert:
+![](image/1.7.PNG)
+- Tạo Channel Alert: Ban đầu cần tạo một BotAPI và ChatID. Ở đây BotAPI: 485183556:AAED64Qp5qx9bYrF9gHQCgIMMHI94yZ6mpc và ChatID: @monitor_stick
+![](image/1.8.PNG)
 
 
 
