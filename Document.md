@@ -105,6 +105,12 @@ TICK bao gồm 4 thành phần: Telegraf, InfluxDB, Chronograf, Kapacitor. Chứ
 - Quản lý Influxdb tại Influxdb Admin
 - Thêm source của influxdd từ các host khác 
 ### Với Grafana: Truy cập địa chỉ: localhost:3000
+- Giao diện login: nhập admin/admin Hình 1,1
+- Thêm database: hình 1.2 ,1.3, 1.4
+- Thêm dashboard: hình 1.5
+Chọn graph -> Panel title -> Edit và lựa chọn các tham số để monitor. Ví dụ ở đây lựa chọn monior CPU hỉnh 1.6
+- Tạo alert: hình 1.7
+- Tạo Channel Alert: Ban đầu cần tạo một BotAPI và ChatID. Ở đây BotAPI: 485183556:AAED64Qp5qx9bYrF9gHQCgIMMHI94yZ6mpc và ChatID: @monitor_stick hinh 1.8 
 
 
 
