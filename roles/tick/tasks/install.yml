@@ -1,0 +1,11 @@
+- name: install TICK
+  yum:
+   name: "{{item}}"
+   state: latest
+   state: started
+   enabled: yes
+  with_items:
+   - influxdb
+   - telegraf
+   - kapacitor
+  notify: start_service
