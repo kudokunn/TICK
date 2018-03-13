@@ -2,3 +2,6 @@
   template:
    src: influxdata.repo.j2
    dest: /etc/yum.repos.d/influxdata.repo.j2
+- name: install kapacitor
+  yum: name=https://dl.influxdata.com/chronograf/releases/chronograf-1.2.0~beta3.x86_64.rpm
+
