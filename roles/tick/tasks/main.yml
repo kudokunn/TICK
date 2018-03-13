@@ -13,4 +13,4 @@
    - influxdb
    - telegraf
    - kapacitor
-   - chronograf
+   - https://dl.influxdata.com/chronograf/releases/chronograf-1.2.0~beta3.x86_64.rpmZZ
