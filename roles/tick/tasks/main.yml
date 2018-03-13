@@ -1,17 +1,2 @@
-- name: Add repository mariadb
-  template:
-   src: influxdata.repo.j2
-   dest: /etc/yum.repos.d/influxdata.repo.j2
-
-- name: install TICK
-  yum:
-   name: "{{item}}"
-   state: latest
-   state: started
-   enabled: yes
-  with_items:
-   - influxdb
-   - telegraf
-   - kapacitor
-   - https://dl.influxdata.com/chronograf/releases/chronograf-1.2.0~beta3.x86_64.rpm
-  notify: start_service
+- include: common.yml
+- include: install.yml
