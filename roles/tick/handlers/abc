@@ -1,0 +1,10 @@
+- name: start_service 
+  service:
+   name: "{{item}}"
+   state: started
+   enabled: yes
+  with_items:
+   - influxdb
+   - telegraf
+   - chronograf
+   - kapacitor
