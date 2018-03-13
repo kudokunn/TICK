@@ -7,5 +7,4 @@
   yum:
    name: grafana
    state: latest
-   state: started
-   enabled: yes
+   
